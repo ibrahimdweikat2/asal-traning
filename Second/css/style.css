@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0px !important;
+    padding: 0 !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: aliceblue;
+    height: 200vh;
+}
+/* Style Container */
+.container{
+    background-color: inherit;
+}
+
+
+/* Style NavBar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+.navbar.active{
+    background-color: rgba(240,240,240, 0.5) !important;
+    position: fixed !important;
+    width: 100%;
+}
+
+.navbar .logo img{
+    width: 250px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* style menu navbar */
+
+.navbar .menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu .burger-menu{
+    display: none;
+}
+.menu .burger-menu.active{
+    display: block;
+}
+
+.navbar .menu .menu-list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: right 0.5s ease-in-out;
+}
+.navbar .menu .menu-list a {
+    padding: 14px 16px;
+    position: relative;
+}
+
+
+.navbar .menu .menu-list .link.active::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: black;
+}
+
+.menu .menu-list .link:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
+    border-bottom:3px solid black ;
+}
+.menu .menu-list .face{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.menu .menu-list .face:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
+}
+
+.menu .menu-list .phone{
+    font-size: 25px;
+}
+.menu .menu-list .phone:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
+}
+
+@media screen and (max-width:992px){
+    .burger-menu{
+        display: block !important;
+        font-size: 25px;
+        padding: 14px 16px !important;
+    }
+    .burger-menu:hover{
+        cursor: pointer !important;
+        background-color: #FAFAFA !important;
+    }
+    .menu-list{
+        flex-direction: column !important;
+        position: absolute;
+        right:100% !important;
+    }
+
+    .menu-list.active{
+        position: absolute !important;
+        right: 0 !important;
+        top: 100% !important;
+        z-index: 4 !important;
+        background-color: rgba(240,240,240,50%);
+        padding: 0 5px !important;
+    }
+    .menu-list.active .link{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    /* .navbar.active{
+        height: 500px !important;
+    } */
+}

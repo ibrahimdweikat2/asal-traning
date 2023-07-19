@@ -1,0 +1,53 @@
+
+
+.container{
+    padding: 20px 50px;
+}
+
+/* first-line */
+.first-line{
+    column-count: 3;
+    white-space: wrap;
+}
+
+.first-line .first{
+    margin-top: 0 !important;
+}
+.first-line h1{
+    column-span: all;
+    font-weight: normal;
+}
+
+
+/* three line */
+.three-line{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+
+/* media */
+@media screen and (max-width:768px){
+    .first-line{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width:600px){
+    .first-line{
+        column-count: 1;
+    }
+
+    .first-line p{
+        white-space: wrap;
+    }
+
+
+    .three-line{
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 20px !important;
+    }
+}

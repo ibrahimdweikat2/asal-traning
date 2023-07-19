@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0px !important;
+    padding: 0 !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: aliceblue;
+    height: 200vh;
+}
+/* Style Container */
+.container{
+    background-color: inherit;
+}
+
+
+/* Style NavBar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+
+.navbar .logo img{
+    width: 250px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* style menu navbar */
+
+.navbar .menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu .burger-menu{
+    display: none;
+}
+
+.navbar .menu .menu-list a,
+.navbar .menu .menu-list1 a {
+    padding: 14px 16px;
+    position: relative;
+}
+
+.navbar .menu .menu-list .link.active::after,
+.navbar .menu .menu-list1 .link.active::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: black;
+}
+
+.menu .menu-list .link:hover,
+.menu .menu-list1 .link:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
+    border-bottom:3px solid black ;
+}
+.menu .menu-list .face,
+.menu .menu-list1 .face{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.menu .menu-list .face:hover,
+.menu .menu-list1 .face:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
+}
+.menu .menu-list .phone,
+.menu .menu-list1 .phone{
+    font-size: 25px;
+}
+.menu .menu-list .phone:hover,
+.menu .menu-list1 .phone:hover{
+    cursor: pointer;
+    background-color: #FAFAFA;
+}
+.menu-list1{
+    display: none;
+}
+
+.menu-list{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width:992px){
+    .burger-menu{
+        display: flex !important;
+        font-size: 25px;
+        padding: 14px 16px !important;
+    }
+    .burger-menu:hover{
+        cursor: pointer !important;
+        background-color: #FAFAFA !important;
+    }
+    #checkMenu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+     #menuList1{
+        position: absolute;
+        right: 110%;
+    }
+
+    #checkMenu:checked ~ #menuList1{
+        right: 0;
+        top: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    .menu-list1 .link{
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list{
+        display: none !important;
+    }
+}
