@@ -1,0 +1,53 @@
+.header-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.header-title .mask-div h2{
+    font-size: 28px;
+    font-family: "lemonada",cursive;
+    color: var(--main-color);
+    font-weight: bold;
+    /* position: relative; */
+}
+
+.mask-div{
+    position: relative;
+}
+
+.header-title .mask-div .mask-info{
+    -webkit-mask-image: url('https://groca.myshopify.com/cdn/shop/files/leaf.png?v=1614918046&width=1920');
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url("https://groca.myshopify.com/cdn/shop/files/leaf.png?v=1614918046&width=1920");
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 165px;
+    height: 105px;
+    z-index: -1;
+    transition: all 0.5s linear;
+    background: var(--main-color);
+    z-index: 1001;
+}
+
+.header-title p{
+    font-size: 16px;
+    font-family: "Open Sans",sans-serif;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+@media screen and (max-width:415px) {
+    .header-title p{
+        width: auto;
+        max-width: 100%;
+    }
+}
+

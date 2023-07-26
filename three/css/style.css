@@ -124,6 +124,7 @@ body{
      #menuList1{
         position: absolute;
         right: 110%;
+        transition: right 0.5s;
     }
 
     #checkMenu:checked ~ #menuList1{

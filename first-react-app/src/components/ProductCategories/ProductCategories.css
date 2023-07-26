@@ -1,0 +1,74 @@
+.product-title{
+    width: 180px;
+    height: 180px;
+    margin-top: 50px;
+}
+
+.product-link{
+    position: relative;
+    margin-right: 16px;
+    text-align: center;
+}
+
+.product-link .product-mask{
+    -webkit-mask-image: url('https://groca.myshopify.com/cdn/shop/files/Untitled-1.png?v=1614918045&width=1920');
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url("https://groca.myshopify.com/cdn/shop/files/Untitled-1.png?v=1614918045&width=1920");
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 185px;
+    height: 185px;
+    z-index: -1;
+    transition: all 0.5s linear;
+}
+.product-link:hover{
+    cursor: pointer;
+}
+
+.product-link:hover :where(h2,img){
+    color: white;
+}
+
+.product-link:hover .product-mask{
+    background: var(--main-color) !important;
+}
+
+.product-link .product-mask.milk{
+    background: #e1ffd9;
+}
+
+.product-link .product-mask.fruits{
+    background: #ffdedc;
+}
+
+.product-link .product-mask.flour{
+    background: #dff1ff;
+}
+
+.product-link .product-mask.meat{
+    background: #fbf9c9;
+}
+
+.product-link .product-mask.vegetables{
+    background: #ffd8ed;
+}
+
+.product-link .product-mask.eggs{
+    background: #e1e9fc;
+}
+
+..product-link img{
+    width: 18px;
+    height: 18px;
+}
+
+.product-link h2{
+    font-size: 20px;
+    font-family: "Open Sans",sans-serif;
+    margin: 0 0 30px;
+}

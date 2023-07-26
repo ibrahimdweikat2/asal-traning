@@ -1,0 +1,25 @@
+:root{
+  --main-color:rgb(137,199,74);
+  --font-navbar-family:'lemonada',cursive
+  --font-additional-family:'Playfair',sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+ul{
+  list-style: none;
+}
+
+.link{
+  color: black ;
+  text-decoration: none;
+}

@@ -1,0 +1,71 @@
+.groca-container{
+    position: relative;
+}
+
+.groca-container .groca-cover{
+    width: auto;
+    max-width: 100%;
+    z-index: -1;
+    height: 740px;
+}
+
+
+.groca-container .groca-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid var(--main-color);
+    padding: 20px 10px;
+}
+
+.groca-info :where(h2,h1,p,button){
+    margin-bottom: 20px;
+}
+
+.groca-info :first-child{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: 'Playfair',serif;
+}
+
+.groca-info h1{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'lemonada',cursive;
+    color: #e7160e;
+    text-align: center;
+}
+
+.groca-info p{
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Playfair',serif;;
+}
+
+.groca-info p span{
+    font:40px bold;
+}
+
+.groca-info .groca-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groca-info .groca-button button{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    text-transform: capitalize !important;
+    transition: 0.5s;
+}
+
+.groca-info .groca-button button:hover{
+    background-color: #e7160e;
+    cursor: pointer;
+    color: white;
+}

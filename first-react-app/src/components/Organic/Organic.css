@@ -1,0 +1,50 @@
+.organic-container{
+    position: relative;
+}
+
+.organic-container .cover{
+    width: auto;
+    max-width: 100%;
+    z-index: -1;
+    height: 740px;
+}
+
+.organic-container .organic-info{
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.organic-info :where(img,h2,h1){
+    margin-bottom: 20px;
+}
+
+.organic-info h2:nth-child(2){
+    font:25px normal;
+}
+
+.organic-info h1{
+    color: var(--main-color);
+    font:60px bold;
+}
+
+.organic-info h2:nth-child(4){
+    font-size: 32px;
+    font-family: var(--font-additional-family);
+}
+
+.organic-info :last-child{
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.5s;
+}
+
+.organic-info :last-child:hover{
+    background-color: tomato;
+}
+
