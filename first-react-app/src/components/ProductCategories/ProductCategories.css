@@ -38,6 +38,10 @@
     background: var(--main-color) !important;
 }
 
+.product-mask.active{
+    background: var(--main-color) !important;
+}
+
 .product-link .product-mask.milk{
     background: #e1ffd9;
 }

@@ -26,17 +26,17 @@
     padding-right: 80px;
     font-family: var(--font-navbar-family);
 }
-.center-nav-bar .link{
+.center-nav-bar .nav-link{
     padding: 35px 10px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-.center-nav-bar .link.active{
+.center-nav-bar .nav-link.active{
     color: var(--main-color);
 }
 
-.center-nav-bar .link:hover{
+.center-nav-bar .nav-link:hover{
     color: var(--main-color);
 }
 
