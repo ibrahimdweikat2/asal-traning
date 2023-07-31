@@ -23,8 +23,8 @@ const ClientComponent = () => {
                 >
                     {
                         ClientSay.map(client=>(
-                            <>
-                                <SwiperSlide>
+                            <div key={client?.id}>
+                                <SwiperSlide key={client?.id}>
                                     <div className='swiperSlide-client'>
                                         <div className="client-info">
                                             <img className='swiper-cover' src={client?.imageUrl} alt={client?.name} />
@@ -36,7 +36,7 @@ const ClientComponent = () => {
                                         <p className='desc'>{client?.describe}</p>
                                     </div>
                                 </SwiperSlide>
-                            </>
+                            </div>
                         ))
                     }
                 </Swiper>

@@ -1,0 +1,45 @@
+.account-details{
+    margin: 50px 80px;
+}
+
+.account-details .account-header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.account-header h1{
+    font-size: 38.5px;
+    font-family: "lemonada",cursive;
+}
+
+.account-header p{
+    color: var(--main-color);
+    font-family: "lemonada",cursive;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.account-header p span{
+    text-decoration: underline;
+}
+
+.account-header p:hover{
+    cursor: pointer;
+    color: #ff6600;
+}
+
+
+.account-details .account-order{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 992px) {
+    .account-details .account-order{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+

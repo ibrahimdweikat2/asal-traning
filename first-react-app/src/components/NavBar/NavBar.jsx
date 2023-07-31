@@ -1,10 +1,16 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import {BiSolidUser,BiSolidCart} from 'react-icons/bi';
 import {AiOutlineSearch,AiFillHeart,AiOutlineMenu,AiOutlineTwitter,AiOutlineClose} from 'react-icons/ai';
 import {BsFacebook,BsPinterest,BsInstagram} from 'react-icons/bs';
+import {useSelector} from 'react-redux';
 import './NavBar.css';
 const NavBar = () => {
+  const cartNum=useSelector(state=>state.Cart);
+  let {user} = useSelector(state=>state.User);
+  useEffect(()=>{
+    user=JSON.parse(localStorage.getItem('user'));
+  },[user]);
   const [isMenuActive,setIsMenuActive]=useState(false);
   const [isCategoriesActive,setIsCategoriesActive]=useState(false);
   return (
@@ -24,7 +30,7 @@ const NavBar = () => {
               isMenuActive  && <div className='nav-auth'>
                 <div className="nav-auth-top">
                   <BiSolidUser className='auth-top-icon'/>
-                  <Link to='/' className='auth-top-login'><span>Log in</span></Link>
+                  <Link to='/login' className='auth-top-login'><span>{user ? 'Account':'log in'}</span></Link>
                 </div>
                 <div className="nav-auth-bottom">
                   <AiOutlineTwitter className='icon' />
@@ -41,10 +47,10 @@ const NavBar = () => {
             <AiOutlineMenu className='menu' onClick={()=>setIsMenuActive(!isMenuActive)}/>
           }
           
-          <Link to='/'><BiSolidUser className='nav-icon'/></Link>
+          <Link to={user !=='undefined' ? '/account':'/login'}><BiSolidUser className='nav-icon'/></Link>
           <div className="nav-cart">
-            <span>1</span>
-            <Link to='/'><BiSolidCart className='nav-icon'/></Link>
+            <span>{cartNum.length}</span>
+            <Link to='/cart'><BiSolidCart className='nav-icon'/></Link>
           </div>
           <Link to='/'><AiFillHeart className='nav-icon'/></Link>
         </div>

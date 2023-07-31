@@ -20,7 +20,7 @@
     margin-bottom: 20px;
 }
 
-.organic-info h2:nth-child(2){
+.organic-info :nth-child(2){
     font:25px normal;
 }
 
@@ -29,7 +29,7 @@
     font:60px bold;
 }
 
-.organic-info h2:nth-child(4){
+.organic-info :nth-child(4){
     font-size: 32px;
     font-family: var(--font-additional-family);
 }
@@ -46,5 +46,30 @@
 
 .organic-info :last-child:hover{
     background-color: tomato;
+}
+
+
+@media screen  and (max-width:576px){
+    .organic-container .organic-info{
+        width: auto;
+        max-width: 100%;
+    }
+    .organic-info :where(h2,h1){
+        font-size: 16px !important;
+    }
+    .organic-info{
+        background-color: rgba(255,255,255,0.5);
+        padding: 30px;
+        width: 80% !important;
+        left: 50% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .organic-info h1{
+        font-size: 22px !important;
+        font-weight: bold;
+    }
 }
 

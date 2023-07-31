@@ -1,5 +1,9 @@
-import {Announcement,NavBar,Footer} from './components';
-import {Home} from './pages';
+import {Suspense} from 'react';
+import {Announcement,NavBar,Footer,
+        Loading} from './components';
+import {Home,Login,Resetpassword,
+        CreateAccount,Cart,Order,
+        Shipping,Payment,Account} from './pages';
 import {createBrowserRouter,Outlet,RouterProvider} from 'react-router-dom';
 function App() {
   const Layout=()=>{
@@ -21,13 +25,47 @@ function App() {
         {
           path:'/',
           element:<Home/>
+        },
+        {
+          path:'/login',
+          element:<Login />
+        },
+        {
+          path:'/resetpasswords',
+          element:<Resetpassword />
+        },
+        {
+          path:'/account/register',
+          element:<CreateAccount />
+        },
+        {
+          path:'/cart',
+          element:<Cart />
+        },
+        {
+          path:'/account',
+          element:<Account />
         }
       ]
+    },
+    {
+      path:'/order',
+      element:<Order />
+    },
+    {
+      path:'/shipping',
+      element:<Shipping />
+    },
+    {
+      path:'/payment',
+      element:<Payment />
     }
   ]);
   return (
     <div>
-      <RouterProvider router={router}/>
+      <Suspense fallback={<Loading />}>
+        <RouterProvider router={router}/>
+      </Suspense>
     </div>
   );
 }

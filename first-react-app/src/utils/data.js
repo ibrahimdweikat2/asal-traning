@@ -161,3 +161,69 @@ export const latestNews=[
         description:'Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...',
     },
 ];
+
+export const Support=[
+    {
+        id:1,
+        title:'Free Shipping',
+        subTitle:'Worldwide'
+    },
+    {
+        id:2,
+        title:'Helpline',
+        subTitle:'+(000)123-4567'
+    },
+    {
+        id:3,
+        title:'24x7 Support',
+        subTitle:'Free For Customers'
+    },
+    {
+        id:4,
+        title:'Returns',
+        subTitle:'30 Days Free Exchanges'
+    },
+]
+
+export const cartProducts=[
+    {
+        id:1,
+        name:'Puffs',
+        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
+        price:'2.54',
+        ContainerType:'Pouch',
+        Flavour:'Vegtable',
+        RichIn:'Vitamin B12',
+        quantity:1
+    },
+    {
+        id:2,
+        name:'Puffs',
+        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
+        price:'2.54',
+        ContainerType:'Pouch',
+        Flavour:'Vegtable',
+        RichIn:'Vitamin B12',
+        quantity:1
+    },
+    {
+        id:3,
+        name:'Puffs',
+        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
+        price:'2.54',
+        ContainerType:'Pouch',
+        Flavour:'Vegtable',
+        RichIn:'Vitamin B12',
+        quantity:1
+    },
+    {
+        id:4,
+        name:'Puffs',
+        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
+        price:'2.54',
+        ContainerType:'Pouch',
+        Flavour:'Vegtable',
+        RichIn:'Vitamin B12',
+        quantity:2,
+    },
+]

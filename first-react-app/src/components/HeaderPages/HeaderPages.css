@@ -1,0 +1,35 @@
+.header-page{
+    width: 100%;
+    max-width: 100%;
+    height: 160px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-title{
+    font-size: 48px;
+    font-family: "lemonada",cursive;
+    color: white;
+    margin-bottom: 0;
+}
+.header-path{
+    font-size: 16px;
+    font-family: "Open Sans",sans-serif;
+    color: white;
+}
+.header-path span{
+    transition: 0.5s;
+}
+.header-path span:hover{
+    color: black;
+    cursor: pointer;
+}

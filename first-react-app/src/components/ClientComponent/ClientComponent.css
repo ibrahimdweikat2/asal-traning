@@ -67,3 +67,23 @@
     padding: 10px 100px;
 }
 
+
+@media screen and (max-width: 768px) {
+    .client-component .clients-info{
+        padding: 0 !important;
+    }
+    .swiperSlide-client .desc{
+        padding: 10px 50px;
+    }
+
+    .swiperSlide-client{
+        width: 100% !important;
+    }
+    .swiper-slider{
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 100% !important;
+    }
+    
+}

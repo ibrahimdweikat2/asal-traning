@@ -1,13 +1,17 @@
 import React,{useState,useEffect} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation,Pagination } from 'swiper/modules';
 import {ProductCard,Organic,Groca,
         Grocery,HeaderTitle,ProductCategories,
         ClientComponent,} from '../../components';
 import {productCategoriesLink,Products,latestNews} from '../../utils/data';
 import {AiOutlineArrowUp} from 'react-icons/ai';
+import {BsArrowLeftRight,BsFillPersonFill,BsCalendarDateFill,BsTelephoneFill} from 'react-icons/bs';
+import {BiSolidTruck} from 'react-icons/bi'
+import {SlEarphones} from 'react-icons/sl';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './Home.css';
 const Home = () => {
   const [isArrowDown,setIsArrowDown]=useState(false);
@@ -40,7 +44,6 @@ const Home = () => {
       window.removeEventListener('scroll',isArrowDowns);
     }
   },[]);
-  console.log(categorie,productsCategories,times);
   return (
     <div className='home'>
       <div className={`${isArrowDown ? 'return-top':'return-top  not'}`}><a href='#home'><AiOutlineArrowUp className='arrow-up'/></a></div>
@@ -145,29 +148,108 @@ const Home = () => {
       title={'Latest News'}
       description={'Est ante in nibh mauris cursus donec enim diam'}
       />
-      <div className="news">
+      <div className="row news">
         {
           latestNews.map(news=>(
-            <div key={news?.id} className="news-card">
-              <img src={news?.imageUrl} alt={news?.title} />
-              <div className="news-info">
-                <div className="news-address">
+            <div key={news?.id} className="col-12 col-md-6 col-lg-4 news-card">
+              <div className="news-img">
+                <img src={news?.imageUrl} alt={news?.title}/>
+              </div>
+              <div className="news-info d-flex justify-content-center align-items-center flex-column">
+                <div className="news-address d-flex justify-content-center align-items-center gap-5">
                   <div className="address">
+                    <BsFillPersonFill className='address-icon'/>
                     {news?.address}
-                    </div>
+                  </div>
                   <div className="history">
+                    <BsCalendarDateFill  className='address-icon'/>
                     {news?.Time}
-                    </div>
+                  </div>
                 </div>
                 <div className="news-title">
                   <h1>{news?.title}</h1>
                   <p>{news?.description}</p>
                 </div>
-                <button>Read More</button>
               </div>
+              <button>Read More</button>
             </div>
           ))
         }
+      </div>
+      <div className="Subscribe">
+        <img src="https://groca.myshopify.com/cdn/shop/files/bg-3.jpg?v=1614918264&width=1780" alt="*" />
+          <div className="email-info">
+            <input type="email" name="email" id='email'/>
+            <label className='email-label' htmlFor="email">Email Address</label>
+            <button>Subscribe</button>
+          </div>
+      </div>
+      <div className="pagination-swiper">
+        <Swiper
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
+        slidesPerView={4}
+        spaceBetween={5}
+        >
+          <SwiperSlide>
+            <img src="https://groca.myshopify.com/cdn/shop/files/client-4.png?v=1614918398&width=710" alt="swiper" width={200} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://groca.myshopify.com/cdn/shop/files/client-5.png?v=1614918398&width=710" alt="swiper" width={200} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://groca.myshopify.com/cdn/shop/files/client-1.png?v=1614918398&width=710" alt="swiper" width={200} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://groca.myshopify.com/cdn/shop/files/client-3.png?v=1614918398&width=710" alt="swiper" width={200} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://groca.myshopify.com/cdn/shop/files/client-6.png?v=1614918398&width=710" alt="swiper" width={200} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://groca.myshopify.com/cdn/shop/files/client-2.png?v=1614918398&width=710" alt="swiper" width={200} />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="support-block">
+        <div className="row support-temp">
+          <div className="support-info col-12 col-md-6 col-lg-3">
+            <div className="support-icon">
+              <BiSolidTruck className='icon-temp'/>
+            </div>
+            <div className="support-details">
+              <h2>Free Shipping</h2>
+              <p>Worldwide</p>
+            </div>
+          </div>
+          <div className="support-info col-12 col-md-6 col-lg-3">
+            <div className="support-icon">
+              <BsTelephoneFill className='icon-temp'/>
+            </div>
+            <div className="support-details">
+              <h2>Helpline</h2>
+              <p>+(000)123-4567</p>
+            </div>
+          </div>
+          <div className="support-info col-12 col-md-6 col-lg-3">
+            <div className="support-icon">
+              <SlEarphones className='icon-temp'/>
+            </div>
+            <div className="support-details">
+              <h2>24x7 Support</h2>
+              <p>Free For Customers</p>
+            </div>
+          </div>
+          <div className="support-info col-12 col-md-6 col-lg-3">
+            <div className="support-icon">
+              <BsArrowLeftRight className='icon-temp'/>
+            </div>
+            <div className="support-details">
+              <h2>Returns</h2>
+              <p>30 Days Free Exchanges</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

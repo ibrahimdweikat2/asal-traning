@@ -1,4 +1,5 @@
-const Cart=(state=[],action)=>{
+import {cartProducts} from '../utils/data';
+const Cart=(state=cartProducts,action)=>{
     switch(action.type){
         case 'ss':
         return state;

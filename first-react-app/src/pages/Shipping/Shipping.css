@@ -1,0 +1,232 @@
+.order-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 15%;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    padding: 56px 66px 21px 65px;
+}
+.order-left .order-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-header .header-info{
+    display: block;
+    flex-direction: column;
+}
+
+.header-info .images-header-cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-info .headers-details{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 10px;
+}
+
+.headers-details span{
+    position: relative;
+    font-size: 12px;
+}
+
+.headers-details :nth-child(3){
+    font-weight: 500;
+}
+.headers-details :last-child{
+    color: #707070;
+}
+.headers-details span:not(:last-child)::after{
+    content: ">";
+    position: absolute;
+    right: -30px;
+}
+
+.order-info-show{
+    margin: 50px 0 30px 50px;
+}
+.order-info-show :where(.show-contact,.show-address){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order-info-show :where(.show-contact,.show-address) :last-child{
+    text-decoration: underline;
+}
+
+.show-contact{
+    border-bottom:1px solid rgba(240,240,240,0.8);
+    padding-bottom: 15px;
+}
+
+.show-address{
+    padding-top: 5px;
+}
+
+.shipping-method{
+    margin: 50px 0 30px 50px;
+}
+.shipping-method h6{
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-bottom: 18px;
+}
+
+.shipping-method .method-show{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+.top-button{
+    margin: 50px 0 30px 50px;
+}
+
+.top-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-button span{
+    position: relative;
+    padding-left: 30px;
+}
+.top-button span::before{
+    content: "<";
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    left: 0;
+    top: -2px;
+}
+
+.top-button button{
+    padding: 20px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    transition: all 0.5s;
+}
+
+.top-button button:hover{
+    background-color: #ff6600;
+}
+
+
+
+
+
+.order-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.order-right .order-right-top .item-show {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-right .order-right-top .item-show:not(:last-child){
+    margin-bottom: 10px;
+}
+.order-right-top .item-show .item-show-left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.item-show-left .item-show-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    position: relative;
+}
+.item-show-left .item-show-img .item-show-quantity{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    right: -10%;
+    top: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-right-top .item-show .item-show-left .item-show-img img{
+    width: 70px;
+    height: 70px;
+}
+
+.item-show-left .show-info h4{
+    font-size: 14px;
+}
+.item-show-left .show-info span{
+    font-size: 12px;
+}
+
+
+.order-right-bottom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.order-right-bottom :where(.order-subtotal,.order-shipping,.order-total){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.order-right-bottom .order-total h1{
+    font-size: 17px;
+}
+
+.order-right-bottom .order-total p span{
+    font-size: 12px;
+}
+
+.order-right-bottom .order-total p strong{
+    font-size: 17px;
+    padding-left: 3px;
+}
+
+.mobile-cart-info{
+    width: 100%;
+    height: 60px;
+    background-color: #f6f6f6;
+    display: none;
+}
+@media screen and (max-width: 854px) {
+    .order-right{
+        display: none;
+    }
+    .mobile-cart-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .mobile-cart-info :first-child{
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
