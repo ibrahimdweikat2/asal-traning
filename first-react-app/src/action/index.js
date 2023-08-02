@@ -16,7 +16,7 @@ export const addToCart=(product,userId)=>async dispatch=>{
                 RichIn:'Vitamin B12',
                 quantity:1,
                 userId,
-                id:res.data.name
+                id:res.data.name,
             }});
         })
     } catch (error) {
