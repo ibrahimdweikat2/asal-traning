@@ -34,6 +34,16 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    font-family: "lemonada",cursive;
+}
+
+.account-order .account-address-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.account-address-details h6,.account-order-history h6{
+    font-size: 26px;
 }
 
 @media screen and (max-width: 992px) {

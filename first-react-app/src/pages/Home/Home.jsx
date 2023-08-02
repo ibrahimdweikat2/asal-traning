@@ -4,13 +4,12 @@ import { Navigation,Pagination } from 'swiper/modules';
 import {ProductCard,Organic,Groca,
         Grocery,HeaderTitle,ProductCategories,
         ClientComponent,} from '../../components';
-import {productCategoriesLink,Products,latestNews} from '../../utils/data';
+import {productCategoriesLink,latestNews} from '../../utils/data';
 import {AiOutlineArrowUp} from 'react-icons/ai';
 import {BsArrowLeftRight,BsFillPersonFill,BsCalendarDateFill,BsTelephoneFill} from 'react-icons/bs';
 import {BiSolidTruck} from 'react-icons/bi'
 import {SlEarphones} from 'react-icons/sl';
-import { collection, getDocs } from "firebase/firestore";
-import {db} from '../../utils/firebase'
+import axios from 'axios';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -38,18 +37,13 @@ const Home = () => {
     })
   }
   useEffect(()=>{
-    const getProduct=async()=>{
-      const colec=collection(db,'products');
-      const item=await getDocs(colec);
-      return item.docs.map(doc=> doc.data());
-    }
-    const getAllProducts=async ()=>{
-      await getProduct().then(data=>{
-        console.log(data);
-        setProductsCategories(data);
+    const getData=async ()=>{
+      await axios.get("https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/products.json").then(res=>{
+        const productsData=Object.values(res.data);
+        setProductsCategories(productsData);
       })
     }
-    getAllProducts();
+    getData();
     const myTimes=setInterval(discountTime,1000);
     window.addEventListener('scroll',isArrowDowns);
     return ()=>{
@@ -107,7 +101,8 @@ const Home = () => {
         {
           categorie === '' ? (
             productsCategories.map((product,index)=>(
-              <ProductCard key={index}
+              <ProductCard 
+              key={index}
               name={product?.name} 
               imageUrl={product?.imageUrl}
               price={product?.price}
@@ -156,8 +151,8 @@ const Home = () => {
       />
       <div className="products">
         {
-          productsCategories.map(product=>(
-            <ProductCard key={product?.id}
+          productsCategories.map((product,index)=>(
+            <ProductCard key={index}
             name={product?.name} 
             imageUrl={product?.imageUrl}
             price={product?.price}

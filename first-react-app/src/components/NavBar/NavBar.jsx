@@ -7,12 +7,13 @@ import {useSelector} from 'react-redux';
 import './NavBar.css';
 const NavBar = () => {
   const cartNum=useSelector(state=>state.Cart);
-  let {user} = useSelector(state=>state.User);
+  let user=JSON.parse(localStorage.getItem('user'));
   useEffect(()=>{
     user=JSON.parse(localStorage.getItem('user'));
   },[user]);
   const [isMenuActive,setIsMenuActive]=useState(false);
   const [isCategoriesActive,setIsCategoriesActive]=useState(false);
+  
   return (
     <div className="navbar-container">
       <div className='nav-bar'>
@@ -47,10 +48,10 @@ const NavBar = () => {
             <AiOutlineMenu className='menu' onClick={()=>setIsMenuActive(!isMenuActive)}/>
           }
           
-          <Link to={user !=='undefined' ? '/account':'/login'}><BiSolidUser className='nav-icon'/></Link>
+          <Link to={user  ? '/account':'/login'}><BiSolidUser className='nav-icon'/></Link>
           <div className="nav-cart">
             <span>{cartNum.length}</span>
-            <Link to='/cart'><BiSolidCart className='nav-icon'/></Link>
+            <Link to={user ? '/cart':'/login'}><BiSolidCart className='nav-icon'/></Link>
           </div>
           <Link to='/'><AiFillHeart className='nav-icon'/></Link>
         </div>

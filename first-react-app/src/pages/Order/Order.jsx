@@ -1,13 +1,61 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 import './Order.css';
 const TAX=0.04;
 const Order = () => {
+  const dispatch=useDispatch();
+  const navigation=useNavigate();
+  const [isLoading,setIsLoading]=useState(false);
+  const [error,setError]=useState('');
+  const [formData,setFormData] =useState({
+    country:'',
+    firstName:'',
+    lastName:'',
+    address:'',
+    address2:'',
+    city:'',
+    zip:'',
+    saveData:false
+  });
   const cardProduct=useSelector(state=>state.Cart);
+  const addressUser=useSelector(state=>state.address);
+  console.log(addressUser);
+  let user=JSON.parse(localStorage.getItem('user'));
   const total=cardProduct.reduce((prev,curr)=>{
     return prev+(curr?.price*curr?.quantity);
   },0);
+  useEffect(()=>{
+    user=JSON.parse(localStorage.getItem('user'));
+  },[user]);
+  const changeHandller=e=>{
+    setFormData({...formData,[e.target.name]:e.target.value});
+      if(e.target.checked&& formData?.country!==''&& formData?.firstName!==''&& formData?.lastName!==''&& formData?.address!==''&& formData?.address2!==''
+      &&formData?.city!==''&& formData?.zip!==''){
+        setFormData({...formData,saveData:true});
+      }
+  }
+  const submitHandler=async e=>{
+    e.preventDefault();
+    try {
+      setIsLoading(true);
+      if(formData?.saveData){
+        await axios.post('https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/address.json',{
+        ...formData,
+        userId:user.userId
+      });
+      dispatch({type:"SAVE",payload:{...formData,userId:user.userId}});
+      }else{
+        dispatch({type:"SAVE",payload:{...formData,userId:user.userId}});
+      }
+      setIsLoading(false);
+      navigation('/shipping');
+    } catch (error) {
+      setError(error.message);
+    }
+  }
   const totalWithTAX=total+((total*TAX));
   return (
     <div className='order-container'>
@@ -29,26 +77,28 @@ const Order = () => {
             </div>
           </div>
         </div>
-        <div className="order-contact">
-          <div className="contact-header">
-            <h1>Contact</h1>
-            <p>Already have an account? <Link to={'/login'} className='link'><span>log in</span></Link></p>
+        {!user && (
+          <div className="order-contact">
+            <div className="contact-header">
+              <h1>Contact</h1>
+              <p>Already have an account? <Link to={'/login'} className='link'><span>log in</span></Link></p>
+            </div>
+            <div className="contact-email">
+              <input className='form-control' type="email" name="email" id="email" placeholder='Email or Phone Number'/>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="emailCheck" />
+              <label className="form-check-label" htmlFor="emailCheck">
+                Email me with news and offers
+              </label>
+            </div>
           </div>
-          <div className="contact-email">
-            <input className='form-control' type="email" name="email" id="email" placeholder='Email or Phone Number'/>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" id="emailCheck" />
-            <label className="form-check-label" htmlFor="emailCheck">
-              Email me with news and offers
-            </label>
-          </div>
-        </div>
+        )}
         <div className="order-shipping-address">
           <h2>Shipping Address</h2>
-          <form className='order-form'>
+          <form className='order-form' onSubmit={submitHandler}>
             <div className="country-select">
-              <select className="form-select" id="country" name="country">
+              <select className="form-select" id="country" value={formData?.country} name="country" onChange={changeHandller}>
                 <option>Country/Region</option>
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Aland Islands</option>
@@ -306,10 +356,10 @@ const Order = () => {
               </div>
               <div className="row">
                 <div className="col">
-                  <input type="text" className="form-control" placeholder="First name" />
+                  <input type="text" className="form-control" placeholder="First name" value={formData?.firstName} name='firstName' onChange={changeHandller} />
                 </div>
                 <div className="col">
-                  <input type="text" className="form-control" placeholder="Last name" />
+                  <input type="text" className="form-control" placeholder="Last name" value={formData?.lastName} name='lastName' onChange={changeHandller} />
                 </div>
               </div>
               <div>
@@ -317,34 +367,36 @@ const Order = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="inputAddress">Address</label>
-                  <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                  <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" value={formData?.address} name='address' onChange={changeHandller} />
                 </div>
                 <div className="form-group">
                   <label htmlFor="inputAddress2">Address 2</label>
-                  <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+                  <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={formData?.address2} name='address2' onChange={changeHandller} />
                 </div>
                 <div className="form-row">
                   <div className="form-group col-6">
                     <label htmlFor="inputCity">City</label>
-                    <input type="text" className="form-control" id="inputCity" />
+                    <input type="text" className="form-control" id="inputCity" onChange={changeHandller} value={formData?.city} name='city'/>
                   </div>
                   <div className="form-group col-6">
                     <label htmlFor="inputZip">Zip</label>
-                    <input type="text" className="form-control" id="inputZip" />
+                    <input type="text" className="form-control" id="inputZip" onChange={changeHandller} name='zip' value={formData?.zip}/>
                   </div>
                 </div>
                 <div className="form-group">
                   <div className="form-check">
-                    <input className="form-check-input" type="checkbox" id="gridCheck" />
+                    <input className="form-check-input" type="checkbox" id="gridCheck" onChange={changeHandller} />
                     <label className="form-check-label" htmlFor="gridCheck">
                     Save this information for next time
                     </label>
                   </div>
                 </div>
                 <div className="button-shipping">
-                  <Link to='/shipping' className='link'>
-                    <button>Continue To Shipping</button>
-                  </Link>
+                  <button type='submit'>{isLoading ? (
+                    <div className="spinner-border text-success" role="status">
+                      <span className="sr-only"></span>
+                    </div>
+                  ):"Continue To Shipping"}</button>
                 </div>
               </div>
           </form>
@@ -375,7 +427,7 @@ const Order = () => {
         <div className="order-right-bottom">
           <div className="order-subtotal">
             <p>subtotal</p>
-            <strong>${total}</strong>
+            <strong>${total.toFixed(2)}</strong>
           </div>
           <div className="order-shipping">
             <p>shipping</p>

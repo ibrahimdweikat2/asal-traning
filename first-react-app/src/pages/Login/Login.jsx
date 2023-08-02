@@ -2,11 +2,11 @@ import {useState} from 'react';
 import {HeaderPages} from '../../components';
 import './Login.css';
 import { Link } from 'react-router-dom';
-import {auth,db} from '../../utils/firebase';
+import {auth} from '../../utils/firebase';
 import {  signInWithEmailAndPassword } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
 import {useNavigate} from 'react-router-dom';
 import {useDispatch} from 'react-redux'
+import axios from 'axios';
 const Login = () => {
   const dispatch=useDispatch();
   const navigation=useNavigate();
@@ -25,16 +25,19 @@ const Login = () => {
       setIsLoading(true);
       if(formData?.email!=='' && formData?.password!==''){
         await signInWithEmailAndPassword(auth,formData?.email,formData?.password).then(async res=>{
-          const docRef=doc(db,"users",res?.user?.uid);
-          const docSnap=await getDoc(docRef);
-          if(docSnap.exists()){
-            localStorage.setItem('user',JSON.stringify({username:docSnap.data()?.username,
-                                                        email:docSnap.data()?.email,
-                                                      token:res?.user?.accessToken
+          await axios.get('https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/users.json').then(async userData=>{
+            const users=Object.values(userData.data);
+            const exisitingUser=users.filter(user=>user.userId===res.user.uid);
+            if(exisitingUser){
+                localStorage.setItem('user',JSON.stringify({username:exisitingUser[0].username,
+                                                        email:exisitingUser[0].email,
+                                                      token:res?.user?.accessToken,
+                                                      userId:res.user.uid
                                                     }));
                                                     dispatch({type:'set-user'});
                                                     navigation('/');
-          }
+            }
+          })
         }).catch(error=>{
           setError(error.message);
         })
@@ -51,7 +54,7 @@ const Login = () => {
         <div className="login-form">
           <form onSubmit={submitHandller} className='form-login'>
             <h1>Login</h1>
-            <p>{error!== ''&& error.split(':')[1].split(" ")[2].split("/")[1].slice(0,-2)}</p>
+            <p>{error !== '' && error.length <39 ?error.split(':')[1].split(" ")[2].split("/")[1].slice(0,-2):error}</p>
             <div className="form-email">
               <input type="email" name="email" id="Email" required value={formData?.email} onChange={changeHandler}/>
               <label htmlFor="Email">Email</label>

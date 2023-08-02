@@ -1,14 +1,29 @@
 import React from 'react';
 import {HeaderPages} from '../../components'
-import {useSelector} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
+import {deleteCartItem,updateIncementCartItem,updateDecrementCartItem} from '../../action/index';
 import { AiFillDelete} from 'react-icons/ai';
 import './Cart.css'
 import { Link } from 'react-router-dom';
 const Cart = () => {
+  const dispatch=useDispatch();
   const cartProduct=useSelector(state=>state.Cart);
   const total=cartProduct.reduce((prev,curr)=>{
     return prev+(curr?.price*curr?.quantity);
   },0);
+  const deleteItem=(id)=>{
+    dispatch(deleteCartItem(id));
+  }
+  const updateInc=(item)=>{
+    if(item?.quantity === 0){
+      deleteItem(item?.id);
+    }else{
+    dispatch(updateIncementCartItem(item));
+    }
+  }
+  const updateDec=(item)=>{
+    dispatch(updateDecrementCartItem(item));
+  }
   return (
     <>
       <HeaderPages title={'Your Shopping Cart'}/>
@@ -45,22 +60,22 @@ const Cart = () => {
                     <td className='hidden-td'>
                       <div className="quantity-details">
                         <div className="quantity-num">
-                          <div className="modyfy-quantity">
+                          <div className="modyfy-quantity" onClick={()=>updateDec(item)}>
                             <span>-</span>
                           </div>
-                          <input type="text" name="quantityNumber" value={1} min={0}/>
-                          <div className="modyfy-quantity">
+                          <input type="text" name="quantityNumber" Value={item?.quantity} min={0}/>
+                          <div className="modyfy-quantity" onClick={()=>updateInc(item)}>
                             <span>+</span>
                           </div>
                         </div>
-                        <div className="quantity-delete">
+                        <div className="quantity-delete" onClick={()=>deleteItem(item?.id)}>
                           <AiFillDelete className='delete-icon'/>
                         </div>
                       </div>
                     </td>
                     <td className='hidden-td'>
                       <div className="item-price">
-                        ${item?.price}
+                        ${(item?.price*item?.quantity).toFixed(2)}
                       </div>
                     </td>
                   </tr>

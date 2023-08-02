@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
 import {HeaderPages} from '../../components';
-import {auth,db} from '../../utils/firebase';
+import {auth} from '../../utils/firebase';
 import {createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore"; 
 import CryptoJS from 'crypto-js';
 import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 const CreateAccount = () => {
     const navigation=useNavigate();
@@ -26,10 +26,11 @@ const CreateAccount = () => {
             if(formData?.email!=='' && formData?.password!==''&& formData?.firstName!=='' && formData?.lastName!==''){
                 const res=await createUserWithEmailAndPassword(auth,formData?.email,formData?.password);
                 const hashPass=CryptoJS.AES.encrypt(formData?.password,"base64");
-                await setDoc(doc(db,'users',res?.user?.uid),{
+                axios.post('https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/users.json',{
                     username:`${formData?.firstName} ${formData?.lastName}`,
                     email:formData?.email,
-                    password:hashPass.toString()
+                    password:hashPass.toString(),
+                    userId:res.user.uid
                 });
             }
             setIsLoading(false);

@@ -1,14 +1,19 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import './Shipping.css';
 const TAX=0.04;
 const Shipping = () => {
     const cardProduct=useSelector(state=>state.Cart);
+    const addressUser=useSelector(state=>state.address);
     const total=cardProduct.reduce((prev,curr)=>{
       return prev+(curr?.price*curr?.quantity);
     },0);
     const totalWithTAX=total+((total*TAX));
+    let user=JSON.parse(localStorage.getItem('user'));
+    useEffect(()=>{
+      user=JSON.parse(localStorage.getItem('user'));
+    },[user]);
   return (
     <div className='order-container'>
       <div className="order-left">
@@ -32,12 +37,12 @@ const Shipping = () => {
         <div className="order-info-show form-control">
             <div className="show-contact">
                 <span>Contact</span>
-                <span>ibrahim@gmail.com</span>
+                <span>{user && user?.email}</span>
                 <span><Link to={'/order'} className='link'>change</Link></span>
             </div>
             <div className="show-address">
                 <span>Skip to</span>
-                <span>palestine, palestine, 400 Nablus, Palestinian Territories</span>
+                <span>{`${addressUser.address} ${addressUser.address2} , ${addressUser.zip} ${addressUser.city},${addressUser.country}`}</span>
                 <span><Link to={'/order'} className='link'>change</Link></span>
             </div>
         </div>
@@ -80,7 +85,7 @@ const Shipping = () => {
         <div className="order-right-bottom">
           <div className="order-subtotal">
             <p>subtotal</p>
-            <strong>${total}</strong>
+            <strong>${total.toFixed(2)}</strong>
           </div>
           <div className="order-shipping">
             <p>shipping</p>
