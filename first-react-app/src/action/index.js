@@ -8,15 +8,17 @@ export const addToCart=(product,userId)=>async dispatch=>{
             RichIn:'Vitamin B12',
             quantity:1,
             userId
-        });
-        dispatch({type:"ADD",payload:{
-            ...product,
-            ContainerType:'Pouch',
-            Flavour:'Vegtable',
-            RichIn:'Vitamin B12',
-            quantity:1,
-            userId
-        }});
+        }).then(res=>{
+            dispatch({type:"ADD",payload:{
+                ...product,
+                ContainerType:'Pouch',
+                Flavour:'Vegtable',
+                RichIn:'Vitamin B12',
+                quantity:1,
+                userId,
+                id:res.data.name,
+            }});
+        })
     } catch (error) {
         console.log(error.message);
     }
