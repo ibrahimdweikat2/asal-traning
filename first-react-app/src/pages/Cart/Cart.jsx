@@ -36,9 +36,9 @@ const Cart = () => {
           <table>
             <thead>
               <tr>
-                <th>PRODUCT</th>
-                <th>QUANTITY</th>
-                <th>TOTAL</th>
+                <th role='columnheader'>PRODUCT</th>
+                <th role='columnheader'>QUANTITY</th>
+                <th role='columnheader'>TOTAL</th>
               </tr>
             </thead>
             <tbody>
@@ -86,7 +86,7 @@ const Cart = () => {
           <div className="total-checkOut">
             <div className="order-special">
               <p>Order special instructions</p>
-              <textarea  cols="45" rows="3"></textarea>
+              <textarea aria-label='Description about cart' cols="45" rows="3"></textarea>
             </div>
             <div className="checkOut">
               <p className='first-checkout'><strong>subTotal</strong> ${total.toFixed(2)} USD</p>
