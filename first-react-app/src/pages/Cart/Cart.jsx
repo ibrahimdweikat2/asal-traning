@@ -15,14 +15,13 @@ const Cart = () => {
     dispatch(deleteCartItem(id));
   }
   const updateInc=(item)=>{
-    if(item?.quantity === 0){
-      deleteItem(item?.id);
-    }else{
     dispatch(updateIncementCartItem(item));
-    }
   }
   const updateDec=(item)=>{
-    dispatch(updateDecrementCartItem(item));
+    if(item?.quantity===1){
+      deleteItem(item?.id);
+    }else
+      dispatch(updateDecrementCartItem(item));
   }
   return (
     <>
