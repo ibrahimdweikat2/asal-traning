@@ -45,7 +45,7 @@
 .footer-block-temp .block-temp-info{
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 1.25rem;
 } 
 
 .block-temp-info :where(.address,.footer-phone,.footer-mail){
@@ -62,12 +62,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .social-icon{
     transition: 0.5s;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .social-icon:hover{
     cursor: pointer;
@@ -81,14 +81,14 @@
 
 }
 .footer-block h1{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "lemonada",cursive;
     font-weight: bold;
     margin-bottom: 45px;
 }
 
 .footer-block span{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans",sans-serif;
     transition: all 0.5s;
 }
@@ -113,7 +113,7 @@
 } */
 
 .footer .footer-bottom{
-    padding:30px 80px 20px;
+    padding:30px 80px 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,7 +122,7 @@
 }
 
 .footer-bottom .footer-details{
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-family: "Open Sans",sans-serif;
 }
 
@@ -153,7 +153,7 @@
         content: "+";
         position: absolute;
         right: 0;
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 }
 @media screen and (max-width:576px) {

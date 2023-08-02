@@ -36,7 +36,7 @@ const Cart = () => {
           <table>
             <thead>
               <tr>
-                <th role='columnheader'>PRODUCT</th>
+                <th role='columnheader'>PRODUCTS</th>
                 <th role='columnheader'>QUANTITY</th>
                 <th role='columnheader'>TOTAL</th>
               </tr>

@@ -16,13 +16,13 @@
 }
 
 .header-title{
-    font-size: 48px;
+    font-size: 3rem;
     font-family: "lemonada",cursive;
     color: white;
     margin-bottom: 0;
 }
 .header-path{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans",sans-serif;
     color: white;
 }

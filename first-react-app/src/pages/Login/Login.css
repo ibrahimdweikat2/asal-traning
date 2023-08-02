@@ -17,7 +17,7 @@
     text-align: center;
     margin: 24px 0;
     font-family: "lemonada",cursive;
-    font-size: 35px;
+    font-size: 2.1875rem;
     font-weight: bold;
 }
 
@@ -27,7 +27,7 @@
 
 .form-login :where(.form-email,.form-password){
     width: 100%;
-    padding: 15px 20px;
+    padding: 15px 1.25rem;
     position: relative;
 }
 
@@ -38,7 +38,7 @@
     padding: 10px 15px;
     border: 1px solid rgba(240,240,240,.3);
     outline: none;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     transition: all 0.5s;
 }
 
@@ -63,13 +63,13 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 20px 0 30px;
+    margin: 1.25rem 0 30px;
 }
 
 .form-bottom button{
     padding: 8px 30px;
     border: none;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     color: white;
     background-color: var(--main-color);
     transition: 0.7s;
@@ -95,7 +95,7 @@
     border: none;
     outline: none;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     transition: 0.5s;
 }
@@ -104,9 +104,9 @@
 }
 
 .password-change span{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans",sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     transition: 0.7s;
 }
 

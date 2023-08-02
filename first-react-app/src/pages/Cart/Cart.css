@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 35px 20px;
+    padding: 35px 1.25rem;
     margin: 70px 0;
 }
 
@@ -12,13 +12,13 @@
 }
 
 .header-cart h1{
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
     font-family: "lemonada",cursive;
 }
 
 .header-cart p{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "Open Sans",sans-serif;
     color: #89C74A;
     transition:all 0.5s;
@@ -73,13 +73,13 @@
 }
 
 .item-info h1{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "Open Sans",sans-serif;
     font-weight: bold;
 }
 
 .item-info span{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans",sans-serif;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .modyfy-quantity span{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .quantity-num input{
@@ -162,7 +162,7 @@
     padding: 40px 0 0;
 }
 .order-special p{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "Open Sans",sans-serif;
     opacity: 0.7;
 }
@@ -177,7 +177,7 @@
 .checkOut .first-checkout{
     text-align: end;
     font-weight: bold;
-    word-spacing: 20px;
+    word-spacing: 1.25rem;
 }
 .checkOut :first-child strong{
     text-transform: capitalize;
@@ -185,7 +185,7 @@
 
 .checkOut :nth-child(2){
     margin: 22px 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans",sans-serif;
 }
 
@@ -205,7 +205,7 @@
 }
 @media screen and (max-width: 768px) {
     .header-cart p{
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     .cart-product table thead tr :not(:first-child){
         display: none;

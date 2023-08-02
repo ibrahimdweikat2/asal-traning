@@ -34,7 +34,7 @@
 
 .headers-details span{
     position: relative;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .headers-details :nth-child(3){
@@ -74,7 +74,7 @@
     margin: 50px 0 30px 50px;
 }
 .shipping-method h6{
-    font-size: 20px;
+    font-size: 1.25rem;
     text-transform: capitalize;
     padding-bottom: 18px;
 }
@@ -83,7 +83,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1.25rem;
     width: 100%;
 }
 .top-button{
@@ -102,14 +102,14 @@
 .top-button span::before{
     content: "<";
     position: absolute;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     left: 0;
     top: -2px;
 }
 
 .top-button button{
-    padding: 20px 15px;
+    padding: 1.25rem 15px;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -156,8 +156,8 @@
 }
 .item-show-left .item-show-img .item-show-quantity{
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: 50%;
     background-color: gray;
     color: white;
@@ -173,10 +173,10 @@
 }
 
 .item-show-left .show-info h4{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 .item-show-left .show-info span{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 
@@ -192,19 +192,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .order-right-bottom .order-total h1{
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .order-right-bottom .order-total p span{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .order-right-bottom .order-total p strong{
-    font-size: 17px;
+    font-size: 1.0625rem;
     padding-left: 3px;
 }
 
@@ -225,7 +225,7 @@
         padding: 0 10px;
     }
     .mobile-cart-info :first-child{
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bold;
         text-transform: capitalize;
     }

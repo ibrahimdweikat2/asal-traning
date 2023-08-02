@@ -7,7 +7,7 @@
 }
 
 .header-title .mask-div h2{
-    font-size: 28px;
+    font-size: 1.75rem;
     font-family: "lemonada",cursive;
     color: var(--main-color);
     font-weight: bold;
@@ -38,7 +38,7 @@
 }
 
 .header-title p{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Open Sans",sans-serif;
     margin: 10px 0 0 0;
     text-align: center;

@@ -9,14 +9,14 @@
 }
 
 .account-header h1{
-    font-size: 38.5px;
+    font-size: 2.4063rem;
     font-family: "lemonada",cursive;
 }
 
 .account-header p{
     color: var(--main-color);
     font-family: "lemonada",cursive;
-    font-size: 18px;
+    font-size: 1.125rem;
     transition: all 0.5s;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .account-address-details h6,.account-order-history h6{
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 
 @media screen and (max-width: 992px) {

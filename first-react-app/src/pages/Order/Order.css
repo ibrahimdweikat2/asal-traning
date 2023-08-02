@@ -55,7 +55,7 @@
 
 .headers-details span{
     position: relative;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .headers-details :nth-child(2){
@@ -84,12 +84,12 @@
 }
 
 .contact-header h1{
-    font-size: 17px;
+    font-size: 1.0625rem;
     margin: 0;
 }
 
 .contact-header p{
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0;
 }
 
@@ -98,7 +98,7 @@
 }
 .order-contact .contact-email input{
     transition: all 0.09s linear;
-    padding: 10px 20px;
+    padding: 10px 1.25rem;
 }
 
 .order-contact .contact-email input:focus{
@@ -108,7 +108,7 @@
 }
 #emailCheck{
     box-shadow: none;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 #emailCheck:checked{
@@ -124,7 +124,7 @@
 }
 
 .order-shipping-address h2{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
     padding-bottom: 18px;
@@ -133,11 +133,11 @@
 .order-shipping-address .order-form{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .order-form .country-select .form-select{
-    padding: 10px 20px;
+    padding: 10px 1.25rem;
     box-shadow: none;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .order-shipping-address input{
-    padding: 10px 20px;
+    padding: 10px 1.25rem;
     box-shadow: none;
 }
 
@@ -168,7 +168,7 @@
 
 .form-check-input{
     padding: 0 !important;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .form-check-input:checked{
@@ -181,7 +181,7 @@
 }
 
 .button-shipping button{
-    padding: 20px 15px;
+    padding: 1.25rem 15px;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -225,8 +225,8 @@
 }
 .item-show-left .item-show-img .item-show-quantity{
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: 50%;
     background-color: gray;
     color: white;
@@ -242,10 +242,10 @@
 }
 
 .item-show-left .show-info h4{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 .item-show-left .show-info span{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 
@@ -261,19 +261,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .order-right-bottom .order-total h1{
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .order-right-bottom .order-total p span{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .order-right-bottom .order-total p strong{
-    font-size: 17px;
+    font-size: 1.0625rem;
     padding-left: 3px;
 }
 
@@ -288,7 +288,7 @@
         padding: 0 10px;
     }
     .mobile-cart-info :first-child{
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bold;
         text-transform: capitalize;
     }
