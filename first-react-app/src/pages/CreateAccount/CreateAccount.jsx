@@ -49,19 +49,19 @@ const CreateAccount = () => {
                     <p>{error!=='' && error}</p>
                     <div className="form-email">
                         <input type="text" name="firstName" id="firstName" required value={formData?.firstName} onChange={changeHandler}/>
-                        <label htmlFor="firstName">firstName</label>
+                        {formData?.firstName === '' && <label htmlFor="firstName">firstName</label>}
                     </div>
                     <div className="form-email">
                         <input type="text" name="lastName" id="lastName" required value={formData?.lastName} onChange={changeHandler}/>
-                        <label htmlFor="lastName">lastName</label>
+                        {formData.lastName === '' && <label htmlFor="lastName">lastName</label>}
                     </div>
                     <div className="form-email">
                         <input type="email" name="email" id="Email" required value={formData?.email} onChange={changeHandler}/>
-                        <label htmlFor="Email">Email</label>
+                        {formData?.email === '' && <label htmlFor="Email">Email</label>}
                     </div>
                     <div className="form-password">
                         <input type="password" name="password" id="Password" required value={formData?.password} onChange={changeHandler}/>
-                        <label htmlFor="Password">Password</label>
+                        {formData?.password === '' && <label htmlFor="Password">Password</label>}
                     </div>
                     <div className="form-bottom">
                         <button type='submit' disabled={isLoading? true:false}>{isLoading ? (

@@ -57,11 +57,11 @@ const Login = () => {
             <p>{error !== '' && error.length <39 ?error.split(':')[1].split(" ")[2].split("/")[1].slice(0,-2):error}</p>
             <div className="form-email">
               <input type="email" name="email" id="Email" required value={formData?.email} onChange={changeHandler}/>
-              <label htmlFor="Email">Email</label>
+              {formData?.email === '' && <label htmlFor="Email">Email</label>}
             </div>
             <div className="form-password">
             <input type="password" name="password" id="Password" required value={formData?.password} onChange={changeHandler}/>
-              <label htmlFor="Password">Password</label>
+              {formData?.password === '' && <label htmlFor="Password">Password</label>}
             </div>
             <div className="form-bottom">
               <button type='submit'>{isLoading ? (
