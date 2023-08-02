@@ -70,7 +70,7 @@ const NavBar = () => {
           </div>
         </div>
         <div className="search-container">
-          <input type="search" name="search" />
+          <input type="text" aria-label='Search' name="search" />
           <div className="search-button">
             <AiOutlineSearch aria-label='nav-link'  className='search-icon'/>
           </div>
