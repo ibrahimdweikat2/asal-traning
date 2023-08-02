@@ -180,6 +180,17 @@
     }
 }
 
+@media screen and (max-width:455px) {
+    .center-nav-bar.active{
+        width: auto;
+        max-width: 100%;
+    }
+    .center-nav-bar.active .nav-auth{
+        width: auto;
+        max-width: 100%;
+    }
+}
+
 /* end Navbar Style */
 
 /* start search-navbar style */
