@@ -27,8 +27,8 @@ const Shipping = () => {
               <span>{totalWithTAX.toFixed(2)}</span>
             </div>
             <div className="headers-details">
-              <span><Link to='/cart' className='link'>Cart</Link></span>
-              <span><Link to={'/order'} className='link'>Information</Link></span>
+              <span><Link aria-label='asd Gg Gg' to='/cart' className='link'>Cart</Link></span>
+              <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>Information</Link></span>
               <span>Shipping</span>
               <span>Payment</span>
             </div>
@@ -38,12 +38,12 @@ const Shipping = () => {
             <div className="show-contact">
                 <span>Contact</span>
                 <span>{user && user?.email}</span>
-                <span><Link to={'/order'} className='link'>change</Link></span>
+                <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>change</Link></span>
             </div>
             <div className="show-address">
                 <span>Skip to</span>
                 <span>{`${addressUser.address} ${addressUser.address2} , ${addressUser.zip} ${addressUser.city},${addressUser.country}`}</span>
-                <span><Link to={'/order'} className='link'>change</Link></span>
+                <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>change</Link></span>
             </div>
         </div>
         <div className="shipping-method">
@@ -54,8 +54,8 @@ const Shipping = () => {
             </div>
         </div>
         <div className="top-button">
-            <span><Link to={'/order'} className='link'>return to information</Link></span>
-            <Link to={'/payment'} className='link'>
+            <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>return to information</Link></span>
+            <Link aria-label='asd Gg Gg' to={'/payment'} className='link'>
                 <button>Continue To Payment</button>
             </Link>
             </div>

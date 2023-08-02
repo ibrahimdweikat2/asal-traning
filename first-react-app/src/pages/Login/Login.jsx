@@ -71,10 +71,10 @@ const Login = () => {
               ):"Sign In"}</button>
             </div>
             <div className="password-change">
-              <Link to={'/resetpasswords'} className='link'>
+              <Link aria-label='Gg' to={'/resetpasswords'} className='link'>
                 <span>Forgot Your Password?</span>
               </Link>
-              <Link to={'/account/register'} className='link'>
+              <Link aria-label='Gg' to={'/account/register'} className='link'>
                 <span>Create Account</span>
               </Link>
             </div>

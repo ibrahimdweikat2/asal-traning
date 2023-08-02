@@ -7,19 +7,19 @@ const Announcement = () => {
     <div className='Announcement' id='home'>
       <div className="left-Announcement">
         <div className="mail">
-          <AiOutlineMail />
+          <AiOutlineMail aria-label='announcat link' />
           info@example.com
         </div>
         <div className="telephone">
-          <BsTelephoneFill />
+          <BsTelephoneFill aria-label='announcat link' />
           779-775-7799
         </div>
       </div>
       <div className="right-Announcement">
-        <AiOutlineTwitter className='icon' />
-        <BsFacebook className='icon'/>
-        <BsPinterest className='icon' />
-        <BsInstagram className='icon' />
+        <AiOutlineTwitter aria-label='announcat link' className='icon' />
+        <BsFacebook aria-label='announcat link' className='icon'/>
+        <BsPinterest aria-label='announcat link' className='icon' />
+        <BsInstagram aria-label='announcat link' className='icon' />
       </div>
     </div>
   )

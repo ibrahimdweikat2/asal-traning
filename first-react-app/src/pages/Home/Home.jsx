@@ -176,11 +176,11 @@ const Home = () => {
               <div className="news-info d-flex justify-content-center align-items-center flex-column">
                 <div className="news-address d-flex justify-content-center align-items-center gap-5">
                   <div className="address">
-                    <BsFillPersonFill className='address-icon'/>
+                    <BsFillPersonFill aria-label='ad ff' className='address-icon'/>
                     {news?.address}
                   </div>
                   <div className="history">
-                    <BsCalendarDateFill  className='address-icon'/>
+                    <BsCalendarDateFill aria-label='ad ff'  className='address-icon'/>
                     {news?.Time}
                   </div>
                 </div>
@@ -233,7 +233,7 @@ const Home = () => {
         <div className="row support-temp">
           <div className="support-info col-12 col-md-6 col-lg-3">
             <div className="support-icon">
-              <BiSolidTruck className='icon-temp'/>
+              <BiSolidTruck aria-label='Gg' className='icon-temp'/>
             </div>
             <div className="support-details">
               <h2>Free Shipping</h2>
@@ -242,7 +242,7 @@ const Home = () => {
           </div>
           <div className="support-info col-12 col-md-6 col-lg-3">
             <div className="support-icon">
-              <BsTelephoneFill className='icon-temp'/>
+              <BsTelephoneFill aria-label='Gg' className='icon-temp'/>
             </div>
             <div className="support-details">
               <h2>Helpline</h2>
@@ -251,7 +251,7 @@ const Home = () => {
           </div>
           <div className="support-info col-12 col-md-6 col-lg-3">
             <div className="support-icon">
-              <SlEarphones className='icon-temp'/>
+              <SlEarphones aria-label='Gg' className='icon-temp'/>
             </div>
             <div className="support-details">
               <h2>24x7 Support</h2>
@@ -260,7 +260,7 @@ const Home = () => {
           </div>
           <div className="support-info col-12 col-md-6 col-lg-3">
             <div className="support-icon">
-              <BsArrowLeftRight className='icon-temp'/>
+              <BsArrowLeftRight aria-label='Gg' className='icon-temp'/>
             </div>
             <div className="support-details">
               <h2>Returns</h2>

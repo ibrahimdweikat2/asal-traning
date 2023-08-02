@@ -20,7 +20,7 @@ const Account = () => {
       <div className="account-details">
         <div className="account-header" onClick={userSignOut}>
           <h1>Account</h1>
-          <p><BiSolidUser className='account-icon'/> <span>Log Out</span></p>
+          <p><BiSolidUser aria-label='asd ddwww read more' className='account-icon'/> <span>Log Out</span></p>
         </div>
         <div className="account-order">
           <div className="account-order-history">

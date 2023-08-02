@@ -17,23 +17,23 @@ const Footer = () => {
               <img src="https://groca.myshopify.com/cdn/shop/files/logo-footer.png?v=1614918638" alt="shop" />
               <div className="block-temp-info">
                 <div className="address">
-                  <ImLocation className='footer-icon'/>
+                  <ImLocation aria-label='nav link' className='footer-icon'/>
                   <p>No: 58 A, East Madison <br />Street, Baltimore, MD,<br /> USA 4508</p>
                 </div>
                 <div className="footer-phone">
-                  <FaPhoneAlt className='footer-icon'/>
+                  <FaPhoneAlt aria-label='nav link' className='footer-icon'/>
                   <p>423-845-6570</p>
                 </div>
                 <div className="footer-mail">
-                  <MdEmail className='footer-icon'/>
+                  <MdEmail aria-label='nav link' className='footer-icon'/>
                   <p>random@email.com</p>
                 </div>
               </div>
               <div className="block-temp-social">
-                <FaTwitter className='social-icon'/>
-                <FaFacebookSquare className='social-icon'/>
-                <FaPinterest className='social-icon'/>
-                <FaInstagram className='social-icon'/>
+                <FaTwitter aria-label='nav link' className='social-icon'/>
+                <FaFacebookSquare aria-label='nav link' className='social-icon'/>
+                <FaPinterest aria-label='nav link' className='social-icon'/>
+                <FaInstagram aria-label='nav link' className='social-icon'/>
               </div>
             </div>
             <div className="footer-block">
@@ -65,11 +65,11 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-details">© 2023, Groca Powered by Shopify</div>
           <div className="footer-payment">
-            <RiVisaFill />
-            <FaCcMastercard />
-            <LiaCcAmex />
-            <FaCcPaypal />
-            <FaCcDiscover />
+            <RiVisaFill aria-label='nav link' />
+            <FaCcMastercard aria-label='nav link' />
+            <LiaCcAmex aria-label='nav link' />
+            <FaCcPaypal aria-label='nav link' />
+            <FaCcDiscover aria-label='nav link' />
           </div>
         </div>
     </div>

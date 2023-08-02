@@ -25,7 +25,7 @@ const Resetpassword = () => {
               <button>Submit</button>
             </div>
             <div className="cancel-bottom">
-                <Link to='/login' className='link'>
+                <Link aria-label='sgG login' to='/login' className='link'>
                     <button>Cancel</button>
                 </Link>
             </div>

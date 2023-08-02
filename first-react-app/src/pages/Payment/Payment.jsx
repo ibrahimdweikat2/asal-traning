@@ -27,9 +27,9 @@ const Payment = () => {
               <span>{totalWithTAX.toFixed(2)}</span>
             </div>
             <div className="headers-details">
-              <span><Link to='/cart' className='link'>Cart</Link></span>
-              <span><Link to={'/order'} className='link'>Information</Link></span>
-              <span><Link to={'/shipping'} className='link'>Shipping</Link></span>
+              <span><Link aria-label='asd Gg' to='/cart' className='link'>Cart</Link></span>
+              <span><Link aria-label='asd Gg' to={'/order'} className='link'>Information</Link></span>
+              <span><Link aria-label='asd Gg' to={'/shipping'} className='link'>Shipping</Link></span>
               <span>Payment</span>
             </div>
           </div>
@@ -38,12 +38,12 @@ const Payment = () => {
             <div className="show-contact">
                 <span>Contact</span>
                 <span>{user && user?.email}</span>
-                <span><Link to={'/order'} className='link'>change</Link></span>
+                <span><Link aria-label='Gg asd' to={'/order'} className='link'>change</Link></span>
             </div>
             <div className="show-address">
                 <span>Skip to</span>
                 <span>{`${addressUser.address} ${addressUser.address2} , ${addressUser.zip} ${addressUser.city},${addressUser.country}`}</span>
-                <span><Link to={'/order'} className='link'>change</Link></span>
+                <span><Link aria-label='Gg asd' to={'/order'} className='link'>change</Link></span>
             </div>
             <div className="show-method">
                 <span>Method</span>
@@ -363,8 +363,8 @@ const Payment = () => {
             </div>
         </div>
         <div className="top-button">
-            <span><Link to={'/shipping'} className='link'>return to Shipping</Link></span>
-            <Link to={'/payment'} className='link'>
+            <span><Link aria-label='asssd Gg' to={'/shipping'} className='link'>return to Shipping</Link></span>
+            <Link aria-label='asssd Gg' to={'/payment'} className='link'>
                 <button>Pay Now</button>
             </Link>
             </div>

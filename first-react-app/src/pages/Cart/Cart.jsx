@@ -69,7 +69,7 @@ const Cart = () => {
                           </div>
                         </div>
                         <div className="quantity-delete" onClick={()=>deleteItem(item?.id)}>
-                          <AiFillDelete className='delete-icon'/>
+                          <AiFillDelete aria-label='ibrahim read more' className='delete-icon'/>
                         </div>
                       </div>
                     </td>
@@ -91,7 +91,7 @@ const Cart = () => {
             <div className="checkOut">
               <p className='first-checkout'><strong>subTotal</strong> ${total.toFixed(2)} USD</p>
               <p>Taxes and shipping calculated at checkout</p>
-              <Link to={'/order'} className='link'><button>Check Out</button></Link>
+              <Link aria-label='Gg' to={'/order'} className='link'><button>Check Out</button></Link>
             </div>
           </div>
         </div>

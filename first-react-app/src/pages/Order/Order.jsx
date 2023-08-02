@@ -70,9 +70,9 @@ const Order = () => {
               <span>{totalWithTAX.toFixed(2)}</span>
             </div>
             <div className="headers-details">
-              <span><Link to='/cart' className='link'>Cart</Link></span>
+              <span><Link aria-label='Gg' to='/cart' className='link'>Cart</Link></span>
               <span>Information</span>
-              <span><Link to={'/shipping'} className='link'>Shipping</Link></span>
+              <span><Link aria-label='Gg' to={'/shipping'} className='link'>Shipping</Link></span>
               <span>Payment</span>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Order = () => {
           <div className="order-contact">
             <div className="contact-header">
               <h1>Contact</h1>
-              <p>Already have an account? <Link to={'/login'} className='link'><span>log in</span></Link></p>
+              <p>Already have an account? <Link aria-label='Ggg' to={'/login'} className='link'><span>log in</span></Link></p>
             </div>
             <div className="contact-email">
               <input className='form-control' type="email" name="email" id="email" placeholder='Email or Phone Number'/>
