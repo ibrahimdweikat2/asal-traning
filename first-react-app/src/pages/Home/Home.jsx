@@ -10,6 +10,7 @@ import {BsArrowLeftRight,BsFillPersonFill,BsCalendarDateFill,BsTelephoneFill} fr
 import {BiSolidTruck} from 'react-icons/bi'
 import {SlEarphones} from 'react-icons/sl';
 import axios from 'axios';
+import {getProduct} from '../../network/controllers/products';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -36,14 +37,17 @@ const Home = () => {
       secs:time.getSeconds(),
     })
   }
+  getProduct().then(product=>{
+    setProductsCategories(product);
+  })
   useEffect(()=>{
-    const getData=async ()=>{
-      await axios.get("https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/products.json").then(res=>{
-        const productsData=Object.values(res.data);
-        setProductsCategories(productsData);
-      })
-    }
-    getData();
+    // const getData=async ()=>{
+    //   await axios.get("https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/products.json").then(res=>{
+    //     const productsData=Object.values(res.data);
+    //     setProductsCategories(productsData);
+    //   })
+    // }
+    // getData();
     const myTimes=setInterval(discountTime,1000);
     window.addEventListener('scroll',isArrowDowns);
     return ()=>{
