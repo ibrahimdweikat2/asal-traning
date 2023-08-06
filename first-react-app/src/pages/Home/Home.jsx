@@ -9,16 +9,14 @@ import {AiOutlineArrowUp} from 'react-icons/ai';
 import {BsArrowLeftRight,BsFillPersonFill,BsCalendarDateFill,BsTelephoneFill} from 'react-icons/bs';
 import {BiSolidTruck} from 'react-icons/bi'
 import {SlEarphones} from 'react-icons/sl';
-import axios from 'axios';
-import {getProduct} from '../../network/controllers/products';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Home.css';
-const Home = () => {
+const Home = ({productsCategories}) => {
   const [isArrowDown,setIsArrowDown]=useState(false);
   const [categorie,setCategorie]=useState('');
-  const [productsCategories,setProductsCategories]=useState([]);
+  // const [productsCategories,setProductsCategories]=useState([]);
   const [times,setTimes]=useState({
     day:0,
     hours:0,
@@ -37,9 +35,9 @@ const Home = () => {
       secs:time.getSeconds(),
     })
   }
-  getProduct().then(product=>{
-    setProductsCategories(product);
-  })
+  // getProduct().then(product=>{
+  //   setProductsCategories(product);
+  // })
   useEffect(()=>{
     // const getData=async ()=>{
     //   await axios.get("https://groca-b67f6-default-rtdb.europe-west1.firebasedatabase.app/products.json").then(res=>{
