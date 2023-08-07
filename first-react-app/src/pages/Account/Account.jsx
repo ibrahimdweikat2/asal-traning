@@ -1,6 +1,6 @@
 import React from 'react'
 import './Account.css';
-import {HeaderPages} from '../../components'
+import {HeaderPages,ShowNotification} from '../../components'
 import {BiSolidUser} from 'react-icons/bi';
 import {useDispatch,useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom'
@@ -12,6 +12,7 @@ const Account = () => {
   const userSignOut=()=>{
     dispatch({type:'sign-out'});
     dispatch({type:"DELETE"});
+    ShowNotification("User has been signed out");
     navigation('/');
   }
   return (

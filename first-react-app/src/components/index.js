@@ -10,7 +10,9 @@ import ProductCategories from './ProductCategories/ProductCategories';
 import ProductCard from './ProductCard/ProductCard';
 import ClientComponent from './ClientComponent/ClientComponent';
 import HeaderPages from './HeaderPages/HeaderPages';
+import ShowNotification from './ShowNotification';
 export {Announcement,NavBar,Footer,
         Loading,Organic,Groca,
         Grocery,HeaderTitle,ProductCategories,
-        ProductCard,ClientComponent,HeaderPages};
+        ProductCard,ClientComponent,HeaderPages,
+        ShowNotification};

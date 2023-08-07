@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {HeaderPages} from '../../components';
+import {HeaderPages,ShowNotification} from '../../components';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import {auth} from '../../utils/firebase';
@@ -35,6 +35,7 @@ const Login = () => {
                                                       userId:res.user.uid
                                                     }));
                                                     dispatch({type:'set-user'});
+                                                    ShowNotification("User Logged in");
                                                     navigation('/');
             }
           })

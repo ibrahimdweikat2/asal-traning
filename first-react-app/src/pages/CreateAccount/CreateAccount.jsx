@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {HeaderPages} from '../../components';
+import {HeaderPages,ShowNotification} from '../../components';
 import {auth} from '../../utils/firebase';
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import CryptoJS from 'crypto-js';
@@ -34,6 +34,7 @@ const CreateAccount = () => {
                 });
             }
             setIsLoading(false);
+            ShowNotification("User created successfully");
             navigation('/login');
         } catch (error) {
             setError(error.message);

@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import './ProductCard.css';
 import {addToCart,updateIncementCartItem} from '../../action/index';
 import {useDispatch,useSelector} from 'react-redux'
+import {ShowNotification} from '../../components';
 const ProductCard = ({name,imageUrl,price,className=''}) => {
   const dispatch=useDispatch();
   let user=JSON.parse(localStorage.getItem('user'));
@@ -14,8 +15,10 @@ const ProductCard = ({name,imageUrl,price,className=''}) => {
     const foundCard=cartProduct.filter(cardItem=>cardItem?.name===product?.name);
     if(foundCard.length > 0){
       dispatch(updateIncementCartItem(foundCard[0]));
+      ShowNotification("Added product");
     }else{
       dispatch(addToCart(product,user.userId));
+      ShowNotification("Added product");
     }
   }
   return (
