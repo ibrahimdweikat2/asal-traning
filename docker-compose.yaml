@@ -1,7 +1,7 @@
 version: '2.2'
 
 services:
-  Groca:
+  groca:
     build: ./first-react-app
     container_name: Groca_c
     ports:
