@@ -6,7 +6,9 @@ COPY package.json .
 
 RUN npm install -g npm@9.8.1
 
-RUN npm install
+RUN npm config set legacy-peer-deps true
+
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
