@@ -1,8 +1,8 @@
 export default class Product{
-    name=''
-    price=0
-    imageUrl=''
-    categories=[]
+    name="";
+    price=0;
+    imageUrl="";
+    categories=[];
 
     constructor(name, price, imageUrl,categories){
         this.name=name;

@@ -1,104 +1,104 @@
-import React,{useEffect} from 'react'
-import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
-import './Shipping.css';
+import React,{useEffect} from "react";
+import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
+import "./Shipping.css";
 const TAX=0.04;
 const Shipping = () => {
     const cardProduct=useSelector(state=>state.Cart);
     const addressUser=useSelector(state=>state.address);
     const total=cardProduct.reduce((prev,curr)=>{
-      return prev+(curr?.price*curr?.quantity);
+        return prev+(curr?.price*curr?.quantity);
     },0);
     const totalWithTAX=total+((total*TAX));
-    let user=JSON.parse(localStorage.getItem('user'));
+    let user=JSON.parse(localStorage.getItem("user"));
     useEffect(()=>{
-      user=JSON.parse(localStorage.getItem('user'));
+        user=JSON.parse(localStorage.getItem("user"));
     },[user]);
-  return (
-    <div className='order-container'>
-      <div className="order-left">
-        <div className="order-header">
-          <div className="header-info">
-            <div className="images-header-cover">
-              <img src="https://groca.myshopify.com/cdn/shop/files/logo.png?v=1614918881&width=250" alt="*" />
-            </div>
-            <div className="mobile-cart-info">
-              <span>total</span>
-              <span>{totalWithTAX.toFixed(2)}</span>
-            </div>
-            <div className="headers-details">
-              <span><Link aria-label='asd Gg Gg' to='/cart' className='link'>Cart</Link></span>
-              <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>Information</Link></span>
-              <span>Shipping</span>
-              <span>Payment</span>
-            </div>
-          </div>
-        </div>
-        <div className="order-info-show form-control">
-            <div className="show-contact">
-                <span>Contact</span>
-                <span>{user && user?.email}</span>
-                <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>change</Link></span>
-            </div>
-            <div className="show-address">
-                <span>Skip to</span>
-                <span>{`${addressUser.address} ${addressUser.address2} , ${addressUser.zip} ${addressUser.city},${addressUser.country}`}</span>
-                <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>change</Link></span>
-            </div>
-        </div>
-        <div className="shipping-method">
-            <h6>shipping method</h6>
-            <div className="method-show form-control">
-                <span>Stander</span>
-                <span>.{(total*TAX).toFixed(2)}</span>
-            </div>
-        </div>
-        <div className="top-button">
-            <span><Link aria-label='asd Gg Gg' to={'/order'} className='link'>return to information</Link></span>
-            <Link aria-label='asd Gg Gg' to={'/payment'} className='link'>
-                <button>Continue To Payment</button>
-            </Link>
-            </div>
-      </div>
-      <div className="order-right">
-        <div className="order-right-top">
-          {
-            cardProduct.map(item=>(
-              <div key={item?.id} className="item-show">
-                <div className="item-show-left">
-                  <div className="item-show-img">
-                    <div className="item-show-quantity">
-                      <span>{item?.quantity}</span>
+    return (
+        <div className='order-container'>
+            <div className="order-left">
+                <div className="order-header">
+                    <div className="header-info">
+                        <div className="images-header-cover">
+                            <img src="https://groca.myshopify.com/cdn/shop/files/logo.png?v=1614918881&width=250" alt="*" />
+                        </div>
+                        <div className="mobile-cart-info">
+                            <span>total</span>
+                            <span>{totalWithTAX.toFixed(2)}</span>
+                        </div>
+                        <div className="headers-details">
+                            <span><Link aria-label='asd Gg Gg' to='/cart' className='link'>Cart</Link></span>
+                            <span><Link aria-label='asd Gg Gg' to={"/order"} className='link'>Information</Link></span>
+                            <span>Shipping</span>
+                            <span>Payment</span>
+                        </div>
                     </div>
-                    <img src={item?.imageUrl} alt="*" />
-                  </div>
-                  <div className="show-info">
-                    <h4>{item?.name}</h4>
-                    <span>1kg/{item?.Flavour}/{item?.RichIn}</span>
-                  </div>
                 </div>
-                <div className="item-show-right">${(item?.price*item?.quantity).toFixed(2)}</div>
-              </div>
-            ))
-          }
+                <div className="order-info-show form-control">
+                    <div className="show-contact">
+                        <span>Contact</span>
+                        <span>{user && user?.email}</span>
+                        <span><Link aria-label='asd Gg Gg' to={"/order"} className='link'>change</Link></span>
+                    </div>
+                    <div className="show-address">
+                        <span>Skip to</span>
+                        <span>{`${addressUser.address} ${addressUser.address2} , ${addressUser.zip} ${addressUser.city},${addressUser.country}`}</span>
+                        <span><Link aria-label='asd Gg Gg' to={"/order"} className='link'>change</Link></span>
+                    </div>
+                </div>
+                <div className="shipping-method">
+                    <h6>shipping method</h6>
+                    <div className="method-show form-control">
+                        <span>Stander</span>
+                        <span>.{(total*TAX).toFixed(2)}</span>
+                    </div>
+                </div>
+                <div className="top-button">
+                    <span><Link aria-label='asd Gg Gg' to={"/order"} className='link'>return to information</Link></span>
+                    <Link aria-label='asd Gg Gg' to={"/payment"} className='link'>
+                        <button>Continue To Payment</button>
+                    </Link>
+                </div>
+            </div>
+            <div className="order-right">
+                <div className="order-right-top">
+                    {
+                        cardProduct.map(item=>(
+                            <div key={item?.id} className="item-show">
+                                <div className="item-show-left">
+                                    <div className="item-show-img">
+                                        <div className="item-show-quantity">
+                                            <span>{item?.quantity}</span>
+                                        </div>
+                                        <img src={item?.imageUrl} alt="*" />
+                                    </div>
+                                    <div className="show-info">
+                                        <h4>{item?.name}</h4>
+                                        <span>1kg/{item?.Flavour}/{item?.RichIn}</span>
+                                    </div>
+                                </div>
+                                <div className="item-show-right">${(item?.price*item?.quantity).toFixed(2)}</div>
+                            </div>
+                        ))
+                    }
+                </div>
+                <div className="order-right-bottom">
+                    <div className="order-subtotal">
+                        <p>subtotal</p>
+                        <strong>${total.toFixed(2)}</strong>
+                    </div>
+                    <div className="order-shipping">
+                        <p>shipping</p>
+                        <p>${(total*TAX).toFixed(2)}</p>
+                    </div>
+                    <div className="order-total">
+                        <h1>Total</h1>
+                        <p><span>USD</span><strong>{totalWithTAX.toFixed(2)}</strong></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="order-right-bottom">
-          <div className="order-subtotal">
-            <p>subtotal</p>
-            <strong>${total.toFixed(2)}</strong>
-          </div>
-          <div className="order-shipping">
-            <p>shipping</p>
-            <p>${(total*TAX).toFixed(2)}</p>
-          </div>
-          <div className="order-total">
-            <h1>Total</h1>
-            <p><span>USD</span><strong>{totalWithTAX.toFixed(2)}</strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+    );
+};
 
-export default Shipping
+export default Shipping;

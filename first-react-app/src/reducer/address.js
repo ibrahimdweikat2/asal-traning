@@ -1,15 +1,15 @@
 // import {cartProducts} from '../utils/data';
 const address=(state=[],action)=>{
     switch(action.type){
-        case "ALL_USER_ADDRESS":
+    case "ALL_USER_ADDRESS":
         return {
             ...action.payload
-        }
-        case "SAVE":
+        };
+    case "SAVE":
         return {
             ...action.payload
-        }
-        default:
+        };
+    default:
         return state;
     }
 };

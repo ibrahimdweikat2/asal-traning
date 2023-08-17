@@ -2,38 +2,38 @@ export const productCategoriesLink=[
     {
         id:1,
         name:"Milk",
-        iconUrl:'https://groca.myshopify.com/cdn/shop/files/icon-6.png?v=1614918036&width=80',
-        calssName:'milk'
+        iconUrl:"https://groca.myshopify.com/cdn/shop/files/icon-6.png?v=1614918036&width=80",
+        calssName:"milk"
     },
     {
         id:2,
-        name:'Fruits',
-        iconUrl:'https://groca.myshopify.com/cdn/shop/files/icon-5.png?v=1614918036&width=80',
-        calssName:'fruits'
+        name:"Fruits",
+        iconUrl:"https://groca.myshopify.com/cdn/shop/files/icon-5.png?v=1614918036&width=80",
+        calssName:"fruits"
     },
     {
         id:3,
-        name:'Flour',
-        iconUrl:'https://groca.myshopify.com/cdn/shop/files/icon-4.png?v=1614918037&width=80',
-        calssName:'flour'
+        name:"Flour",
+        iconUrl:"https://groca.myshopify.com/cdn/shop/files/icon-4.png?v=1614918037&width=80",
+        calssName:"flour"
     },
     {
         id:4,
-        name:'Meat',
-        iconUrl:'https://groca.myshopify.com/cdn/shop/files/icon-3.png?v=1614918037&width=80',
-        calssName:'meat'
+        name:"Meat",
+        iconUrl:"https://groca.myshopify.com/cdn/shop/files/icon-3.png?v=1614918037&width=80",
+        calssName:"meat"
     },
     {
         id:5,
-        name:'Vegetables',
-        iconUrl:'https://groca.myshopify.com/cdn/shop/files/icon-2.png?v=1614918037&width=80',
-        calssName:'vegetables'
+        name:"Vegetables",
+        iconUrl:"https://groca.myshopify.com/cdn/shop/files/icon-2.png?v=1614918037&width=80",
+        calssName:"vegetables"
     },
     {
         id:6,
-        name:'Eggs',
-        iconUrl:'https://groca.myshopify.com/cdn/shop/files/icon-1.png?v=1614918037&width=80',
-        calssName:'eggs'
+        name:"Eggs",
+        iconUrl:"https://groca.myshopify.com/cdn/shop/files/icon-1.png?v=1614918037&width=80",
+        calssName:"eggs"
     },
 ];
 
@@ -114,116 +114,116 @@ export const Products=[
 export const ClientSay=[
     {
         id:1,
-        imageUrl:'https://groca.myshopify.com/cdn/shop/files/team-2.jpg?v=1614918781&width=550',
+        imageUrl:"https://groca.myshopify.com/cdn/shop/files/team-2.jpg?v=1614918781&width=550",
         name:"Emy Raizaa",
-        subName:'Nutrionist',
-        describe:'Convallis posuere morbi leo urna molestie at elementum eu facilisis. In ante metus dictum at tempor commodo. Dictum non consectetur a erat. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Elementum integer enim neque volutpat.'
+        subName:"Nutrionist",
+        describe:"Convallis posuere morbi leo urna molestie at elementum eu facilisis. In ante metus dictum at tempor commodo. Dictum non consectetur a erat. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Elementum integer enim neque volutpat."
     },
     {
         id:2,
-        imageUrl:'https://groca.myshopify.com/cdn/shop/files/team-2.jpg?v=1614918781&width=550',
+        imageUrl:"https://groca.myshopify.com/cdn/shop/files/team-2.jpg?v=1614918781&width=550",
         name:"Emy Raizaa",
-        subName:'Nutrionist',
-        describe:'Convallis posuere morbi leo urna molestie at elementum eu facilisis. In ante metus dictum at tempor commodo. Dictum non consectetur a erat. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Elementum integer enim neque volutpat.'
+        subName:"Nutrionist",
+        describe:"Convallis posuere morbi leo urna molestie at elementum eu facilisis. In ante metus dictum at tempor commodo. Dictum non consectetur a erat. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Elementum integer enim neque volutpat."
     },
     {
         id:3,
-        imageUrl:'https://groca.myshopify.com/cdn/shop/files/team-2.jpg?v=1614918781&width=550',
+        imageUrl:"https://groca.myshopify.com/cdn/shop/files/team-2.jpg?v=1614918781&width=550",
         name:"Emy Raizaa",
-        subName:'Nutrionist',
-        describe:'Convallis posuere morbi leo urna molestie at elementum eu facilisis. In ante metus dictum at tempor commodo. Dictum non consectetur a erat. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Elementum integer enim neque volutpat.'
+        subName:"Nutrionist",
+        describe:"Convallis posuere morbi leo urna molestie at elementum eu facilisis. In ante metus dictum at tempor commodo. Dictum non consectetur a erat. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Elementum integer enim neque volutpat."
     },
 ];
 
 export const latestNews=[
     {
         id:1,
-        imageUrl:'https://groca.myshopify.com/cdn/shop/articles/blog-1_49ce4b16-fb0a-488e-a203-3a1a84091ced.jpg?v=1580990429&width=720',
-        address:'Ramamoorthi M',
-        Time:'March 26, 2020',
-        title:'Best In Quality Fresh Meat & Seafood',
-        description:'Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...',
+        imageUrl:"https://groca.myshopify.com/cdn/shop/articles/blog-1_49ce4b16-fb0a-488e-a203-3a1a84091ced.jpg?v=1580990429&width=720",
+        address:"Ramamoorthi M",
+        Time:"March 26, 2020",
+        title:"Best In Quality Fresh Meat & Seafood",
+        description:"Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...",
     },
     {
         id:2,
-        imageUrl:'https://groca.myshopify.com/cdn/shop/articles/blog-2.jpg?v=1580990472&width=720',
-        address:'Ramamoorthi M',
-        Time:'March 25, 2020',
-        title:'Best Way To Eat Dry Fruits And Nuts',
-        description:'Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...',
+        imageUrl:"https://groca.myshopify.com/cdn/shop/articles/blog-2.jpg?v=1580990472&width=720",
+        address:"Ramamoorthi M",
+        Time:"March 25, 2020",
+        title:"Best Way To Eat Dry Fruits And Nuts",
+        description:"Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...",
     },
     {
         id:3,
-        imageUrl:'https://groca.myshopify.com/cdn/shop/articles/blog-3.jpg?v=1580990493&width=720',
-        address:'Ramamoorthi M',
-        Time:'March 22, 2020',
-        title:'Fruits & Vegetable Nutrients For Your Health',
-        description:'Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...',
+        imageUrl:"https://groca.myshopify.com/cdn/shop/articles/blog-3.jpg?v=1580990493&width=720",
+        address:"Ramamoorthi M",
+        Time:"March 22, 2020",
+        title:"Fruits & Vegetable Nutrients For Your Health",
+        description:"Turpis nunc eget lorem dolor. Pretium quam vulputate dignissim suspendisse in est ante. Varius duis at consectetur lorem donec. Praesent semper feugiat nibh sed pulvinar proin. Suspendisse faucibus interdum posuere...",
     },
 ];
 
 export const Support=[
     {
         id:1,
-        title:'Free Shipping',
-        subTitle:'Worldwide'
+        title:"Free Shipping",
+        subTitle:"Worldwide"
     },
     {
         id:2,
-        title:'Helpline',
-        subTitle:'+(000)123-4567'
+        title:"Helpline",
+        subTitle:"+(000)123-4567"
     },
     {
         id:3,
-        title:'24x7 Support',
-        subTitle:'Free For Customers'
+        title:"24x7 Support",
+        subTitle:"Free For Customers"
     },
     {
         id:4,
-        title:'Returns',
-        subTitle:'30 Days Free Exchanges'
+        title:"Returns",
+        subTitle:"30 Days Free Exchanges"
     },
-]
+];
 
 export const cartProducts=[
     {
         id:1,
-        name:'Puffs',
-        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
-        price:'2.54',
-        ContainerType:'Pouch',
-        Flavour:'Vegtable',
-        RichIn:'Vitamin B12',
+        name:"Puffs",
+        imageUrl:"https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300",
+        price:"2.54",
+        ContainerType:"Pouch",
+        Flavour:"Vegtable",
+        RichIn:"Vitamin B12",
         quantity:1
     },
     {
         id:2,
-        name:'Puffs',
-        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
-        price:'2.54',
-        ContainerType:'Pouch',
-        Flavour:'Vegtable',
-        RichIn:'Vitamin B12',
+        name:"Puffs",
+        imageUrl:"https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300",
+        price:"2.54",
+        ContainerType:"Pouch",
+        Flavour:"Vegtable",
+        RichIn:"Vitamin B12",
         quantity:1
     },
     {
         id:3,
-        name:'Puffs',
-        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
-        price:'2.54',
-        ContainerType:'Pouch',
-        Flavour:'Vegtable',
-        RichIn:'Vitamin B12',
+        name:"Puffs",
+        imageUrl:"https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300",
+        price:"2.54",
+        ContainerType:"Pouch",
+        Flavour:"Vegtable",
+        RichIn:"Vitamin B12",
         quantity:1
     },
     {
         id:4,
-        name:'Puffs',
-        imageUrl:'https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300',
-        price:'2.54',
-        ContainerType:'Pouch',
-        Flavour:'Vegtable',
-        RichIn:'Vitamin B12',
+        name:"Puffs",
+        imageUrl:"https://cdn.shopify.com/s/files/1/0108/7370/0415/products/Shop-12.png?v=1679892591&width=300",
+        price:"2.54",
+        ContainerType:"Pouch",
+        Flavour:"Vegtable",
+        RichIn:"Vitamin B12",
         quantity:2,
     },
-]
+];

@@ -1,7 +1,7 @@
-import {getApp,getApps,initializeApp} from 'firebase/app';
-import {getFirestore} from 'firebase/firestore';
-import {getStorage} from 'firebase/storage';
-import {getAuth} from 'firebase/auth';
+import {getApp,getApps,initializeApp} from "firebase/app";
+import {getFirestore} from "firebase/firestore";
+import {getStorage} from "firebase/storage";
+import {getAuth} from "firebase/auth";
 const firebaseConfig = {
     apiKey: "AIzaSyCElNNItKzL6Lrt6oNCgJSH9lUNkmGUyTw",
     authDomain: "groca-b67f6.firebaseapp.com",
