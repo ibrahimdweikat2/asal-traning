@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:20-alpine as builder
 
 WORKDIR /groca
 
@@ -8,8 +8,6 @@ COPY package-lock.json .
 
 RUN npm install -g npm@9.8.1
 
-RUN npm config set legacy-peer-deps true
-
 RUN npm install --legacy-peer-deps
 
 RUN npm install react-scripts --legacy-peer-deps
@@ -18,4 +16,11 @@ COPY . .
 
 EXPOSE 3000
 
-CMD [ "npm","start"]
+RUN npm run build
+
+FROM nginx
+EXPOSE 3000
+
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+
+COPY --from=builder /app/build /usr/share/nginx/html

@@ -6,5 +6,8 @@ services:
     container_name: Groca_c
     ports:
       - '3000:3000'
+    volumes:
+      - /groca/node_modules
+      - ./first-react-app:/groca
     stdin_open: true
     tty: true
